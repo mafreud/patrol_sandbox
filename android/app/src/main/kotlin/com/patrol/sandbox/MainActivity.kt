@@ -1,4 +1,4 @@
-package com.example.patrol_sandbox
+package com.patrol.sandbox
 
 import io.flutter.embedding.android.FlutterActivity
 
