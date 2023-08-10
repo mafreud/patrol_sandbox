@@ -50,6 +50,7 @@ android {
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
         minSdkVersion 21
         targetSdkVersion flutter.targetSdkVersion
+        testInstrumentationRunner "pl.leancode.patrol.PatrolJUnitRunner"
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
@@ -61,6 +62,9 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+    testOptions {
+        execution "ANDROIDX_TEST_ORCHESTRATOR"
+    }
 }
 
 flutter {
@@ -68,5 +72,6 @@ flutter {
 }
 
 dependencies {
+    androidTestUtil "androidx.test:orchestrator:1.4.2"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }

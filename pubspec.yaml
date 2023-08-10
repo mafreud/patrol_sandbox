@@ -20,8 +20,8 @@ dev_dependencies:
 patrol:
   app_name: Patrol Sandbox
   android:
-    package_name: com.example.patrolSandbox
+    package_name: com.patrol.patrol_sandbox
   ios:
-    bundle_id: com.example.patrolSandbox
+    bundle_id: com.patrol.sandbox
 flutter:
   uses-material-design: true
