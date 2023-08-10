@@ -2,4 +2,5 @@
 
 FlutterKaigiのCfP向けに作成しているサンプルアプリです。
 
-## References
+### 参考文献
+- [Patrol](https://patrol.leancode.co/)
