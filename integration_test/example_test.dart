@@ -1,10 +1,9 @@
-import 'package:flutter_test/flutter_test.dart';
 import 'package:patrol/patrol.dart';
 import 'package:patrol_sandbox/main.dart';
 
 void main() {
   patrolTest('demo', nativeAutomation: true, (PatrolTester $) async {
-    await $.pumpWidgetAndSettle(MyApp());
+    await $.pumpWidgetAndSettle(const MyApp());
     // prepare network conditions
     await $.native.enableCellular();
     await $.native.disableWifi();
