@@ -5,14 +5,19 @@ import 'package:patrol_sandbox/main.dart';
 
 void main() {
   patrolTest(
-    'counter state is the same after going to home and switching apps',
+    'patrol_test',
     nativeAutomation: true,
     ($) async {
-      // Replace later with your app's main widget
       await $.pumpWidgetAndSettle(const MyApp());
-
       expect($('Flutter Demo Home Page'), findsOneWidget);
+      await $(FloatingActionButton).tap();
+      await $(FloatingActionButton).tap();
+      await $(FloatingActionButton).tap();
+      expect(find.text('3'), findsOneWidget);
+      await $.native.openNotifications();
+      await $.native.closeNotifications();
       await $.native.pressHome();
+      await $.native.openApp();
     },
   );
 }
